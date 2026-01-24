@@ -1,6 +1,7 @@
 {
   "name": "Scrim-s05qgr9",
   "description": "https://scrimba.com/the-ai-engineer-path-c02v/~0c/s0ap96qdl2/head",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -8,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@langchain/core": "^1.1.17",
+    "@supabase/supabase-js": "^2.91.0",
     "dotenv": "^17.2.3",
+    "langchain": "^1.2.13",
     "openai": "^6.8.1",
     "vite": "latest"
   }
