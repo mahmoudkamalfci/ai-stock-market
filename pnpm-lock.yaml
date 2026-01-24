@@ -11,6 +11,9 @@ importers:
       '@langchain/core':
         specifier: ^1.1.17
         version: 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+      '@langchain/textsplitters':
+        specifier: ^1.0.1
+        version: 1.0.1(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))
       '@supabase/supabase-js':
         specifier: ^2.91.0
         version: 2.91.0
@@ -222,6 +225,12 @@ packages:
     peerDependenciesMeta:
       zod-to-json-schema:
         optional: true
+
+  '@langchain/textsplitters@1.0.1':
+    resolution: {integrity: sha512-rheJlB01iVtrOUzttscutRgLybPH9qR79EyzBEbf1u97ljWyuxQfCwIWK+SjoQTM9O8M7GGLLRBSYE26Jmcoww==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@langchain/core': ^1.0.0
 
   '@rollup/rollup-android-arm-eabi@4.53.2':
     resolution: {integrity: sha512-yDPzwsgiFO26RJA4nZo8I+xqzh7sJTZIWQOxn+/XOdPE31lAvLIYCKqjV+lNH/vxE2L2iH3plKxDCRK6i+CwhA==}
@@ -749,6 +758,11 @@ snapshots:
     transitivePeerDependencies:
       - react
       - react-dom
+
+  '@langchain/textsplitters@1.0.1(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))':
+    dependencies:
+      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+      js-tiktoken: 1.0.21
 
   '@rollup/rollup-android-arm-eabi@4.53.2':
     optional: true
