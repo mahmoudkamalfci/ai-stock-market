@@ -1,12 +1,11 @@
-import { CharacterTextSplitter } from "@langchain/textsplitters";
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 
 // LangChain text splitter
 async function splitDocument() {
   const response = await fetch('podcasts.txt');
   const text = await response.text();
 
-  const splitter = new CharacterTextSplitter({
-    separator: " ",
+  const splitter = new RecursiveCharacterTextSplitter({
     chunkSize: 150,
     chunkOverlap: 15,
   });

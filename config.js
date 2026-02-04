@@ -1,14 +1,12 @@
 import OpenAI from 'openai';
-// 1. Import and configure dotenv
-import 'dotenv/config';
-
+// 1. Remove dotenv/config as Vite handles it automatically
 /** Ensure the OpenAI API key is available and correctly configured */
-if (!process.env.VITE_OPENAI_API_KEY) {
+if (!import.meta.env.VITE_OPENAI_API_KEY) {
     throw new Error("OpenAI API key is missing or invalid.");
 }
 
 /** OpenAI config */
 export default new OpenAI({
-    apiKey: process.env.VITE_OPENAI_API_KEY,
+    apiKey: import.meta.env.VITE_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true
 });
