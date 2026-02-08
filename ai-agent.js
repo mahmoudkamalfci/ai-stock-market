@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import OpenAI from 'openai';
-import { getCurrentWeather, getLocation, tools } from "./utils/tools.js"
+import { getCurrentWeather, getLocation, tools, functions } from "./utils/tools.js"
 
 
 /** OpenAI config */
@@ -29,11 +29,11 @@ async function agent(query) {
     for (let i = 0; i < MAX_ITERATIONS; i++) {
         console.log(`Iteration #${i + 1}`)
         const response = await openai.responses.create({
-            model: "gpt-3.5-turbo",
+            model: "gpt-4o-mini",
             input: messages,
             tools
         })
-        
+
         let hasFunctionCall = false
         for (const item of response.output) {
             if (item.type === "function_call") {
@@ -47,8 +47,13 @@ async function agent(query) {
                 console.log(`Function result: ${fnResult}`)
                 
                 messages.push({
-                    role: "assistant",
-                    content: `Calling function ${fnName} with arguments: ${item.arguments}`
+                    role: "assistant", // Logic to record the call
+                    content: `Calling function ${fnName} with arguments: ${JSON.stringify(item.arguments)}`
+                })
+
+                messages.push({
+                    role: "user", // Logic to record the result
+                    content: `Function ${fnName} returned: ${fnResult}`
                 })
             }
         }
@@ -61,4 +66,4 @@ async function agent(query) {
     }
 }
 
-await agent("recommand me an activity to do today based on the weather in my current location")
+await agent("what are the activities i can do based on my current location and weather?")

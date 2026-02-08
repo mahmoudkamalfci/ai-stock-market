@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@langchain/core':
         specifier: ^1.1.17
-        version: 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+        version: 1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
       '@langchain/textsplitters':
         specifier: ^1.0.1
-        version: 1.0.1(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))
+        version: 1.0.1(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))
       '@supabase/supabase-js':
         specifier: ^2.91.0
         version: 2.91.0
@@ -22,10 +22,10 @@ importers:
         version: 17.2.3
       langchain:
         specifier: ^1.2.13
-        version: 1.2.13(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+        version: 1.2.13(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
       openai:
-        specifier: ^6.8.1
-        version: 6.8.1(ws@8.19.0)(zod@4.3.6)
+        specifier: ^6.17.0
+        version: 6.17.0(ws@8.19.0)(zod@4.3.6)
       vite:
         specifier: latest
         version: 7.2.2(@types/node@25.0.9)
@@ -493,8 +493,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  openai@6.8.1:
-    resolution: {integrity: sha512-ACifslrVgf+maMz9vqwMP4+v9qvx5Yzssydizks8n+YUJ6YwUoxj51sKRQ8HYMfR6wgKLSIlaI108ZwCk+8yig==}
+  openai@6.17.0:
+    resolution: {integrity: sha512-NHRpPEUPzAvFOAFs9+9pC6+HCw/iWsYsKCMPXH5Kw7BpMxqd8g/A07/1o7Gx2TWtCnzevVRyKMRFqyiHyAlqcA==}
     hasBin: true
     peerDependencies:
       ws: ^8.18.0
@@ -716,14 +716,14 @@ snapshots:
   '@esbuild/win32-x64@0.25.12':
     optional: true
 
-  '@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))':
+  '@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6))':
     dependencies:
       '@cfworker/json-schema': 4.1.1
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.21
-      langsmith: 0.4.8(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+      langsmith: 0.4.8(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
       mustache: 4.2.0
       p-queue: 6.6.2
       uuid: 10.0.0
@@ -734,24 +734,24 @@ snapshots:
       - '@opentelemetry/sdk-trace-base'
       - openai
 
-  '@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))':
+  '@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))':
     dependencies:
-      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+      '@langchain/core': 1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
       uuid: 10.0.0
 
-  '@langchain/langgraph-sdk@1.5.5(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))':
+  '@langchain/langgraph-sdk@1.5.5(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))':
     dependencies:
       p-queue: 9.1.0
       p-retry: 7.1.1
       uuid: 13.0.0
     optionalDependencies:
-      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+      '@langchain/core': 1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
 
-  '@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))(zod@4.3.6)':
+  '@langchain/langgraph@1.1.2(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))(zod@4.3.6)':
     dependencies:
-      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
-      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))
-      '@langchain/langgraph-sdk': 1.5.5(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))
+      '@langchain/core': 1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
+      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))
+      '@langchain/langgraph-sdk': 1.5.5(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))
       '@standard-schema/spec': 1.1.0
       uuid: 10.0.0
       zod: 4.3.6
@@ -759,9 +759,9 @@ snapshots:
       - react
       - react-dom
 
-  '@langchain/textsplitters@1.0.1(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))':
+  '@langchain/textsplitters@1.0.1(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))':
     dependencies:
-      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+      '@langchain/core': 1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
       js-tiktoken: 1.0.21
 
   '@rollup/rollup-android-arm-eabi@4.53.2':
@@ -963,12 +963,12 @@ snapshots:
     dependencies:
       base64-js: 1.5.1
 
-  langchain@1.2.13(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))(openai@6.8.1(ws@8.19.0)(zod@4.3.6)):
+  langchain@1.2.13(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))(openai@6.17.0(ws@8.19.0)(zod@4.3.6)):
     dependencies:
-      '@langchain/core': 1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
-      '@langchain/langgraph': 1.1.2(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))(zod@4.3.6)
-      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.17(openai@6.8.1(ws@8.19.0)(zod@4.3.6)))
-      langsmith: 0.4.8(openai@6.8.1(ws@8.19.0)(zod@4.3.6))
+      '@langchain/core': 1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
+      '@langchain/langgraph': 1.1.2(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))(zod@4.3.6)
+      '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.17(openai@6.17.0(ws@8.19.0)(zod@4.3.6)))
+      langsmith: 0.4.8(openai@6.17.0(ws@8.19.0)(zod@4.3.6))
       uuid: 10.0.0
       zod: 4.3.6
     transitivePeerDependencies:
@@ -980,7 +980,7 @@ snapshots:
       - react-dom
       - zod-to-json-schema
 
-  langsmith@0.4.8(openai@6.8.1(ws@8.19.0)(zod@4.3.6)):
+  langsmith@0.4.8(openai@6.17.0(ws@8.19.0)(zod@4.3.6)):
     dependencies:
       '@types/uuid': 10.0.0
       chalk: 4.1.2
@@ -989,13 +989,13 @@ snapshots:
       semver: 7.7.3
       uuid: 10.0.0
     optionalDependencies:
-      openai: 6.8.1(ws@8.19.0)(zod@4.3.6)
+      openai: 6.17.0(ws@8.19.0)(zod@4.3.6)
 
   mustache@4.2.0: {}
 
   nanoid@3.3.11: {}
 
-  openai@6.8.1(ws@8.19.0)(zod@4.3.6):
+  openai@6.17.0(ws@8.19.0)(zod@4.3.6):
     optionalDependencies:
       ws: 8.19.0
       zod: 4.3.6
